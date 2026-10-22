@@ -3,11 +3,14 @@
   // Add newer entries at the top. The same text is displayed and saved as TXT.
   const history = `ИСТОРИЯ ОБНОВЛЕНИЙ
 
+23.10.2026
+Добавлена Renri Survivors: автоатака, улучшения и босс.
+
 22.10.2026
 Сайт полностью обновлен.
 `;
   const win=document.createElement('section');win.id='updates-window';win.className='window updates-window';win.hidden=true;win.setAttribute('aria-label','История обновлений — Блокнот');
-  win.innerHTML=`<header class="titlebar" data-drag="updates-window"><img src="assets/icons/notepad_file-2.png" alt=""><strong>обновления.txt — Блокнот</strong><div class="window-controls"><button data-updates-action="minimize" aria-label="Свернуть историю обновлений">_</button><button data-updates-action="maximize" aria-label="Развернуть историю обновлений">□</button><button data-updates-action="close" aria-label="Закрыть историю обновлений">×</button></div></header><div class="updates-filebar"><span>Текстовый документ</span><a class="classic" id="updates-download" download="обновления.txt">Сохранить .txt</a></div><pre class="updates-text" id="updates-text" tabindex="0" aria-label="Текст истории обновлений"></pre><footer class="updates-status"><span>Последнее обновление: 22.10.2026</span><span>UTF-8</span></footer>`;
+  win.innerHTML=`<header class="titlebar" data-drag="updates-window"><img src="assets/icons/notepad_file-2.png" alt=""><strong>обновления.txt — Блокнот</strong><div class="window-controls"><button data-updates-action="minimize" aria-label="Свернуть историю обновлений">_</button><button data-updates-action="maximize" aria-label="Развернуть историю обновлений">□</button><button data-updates-action="close" aria-label="Закрыть историю обновлений">×</button></div></header><div class="updates-filebar"><span>Текстовый документ</span><a class="classic" id="updates-download" download="обновления.txt">Сохранить .txt</a></div><pre class="updates-text" id="updates-text" tabindex="0" aria-label="Текст истории обновлений"></pre><footer class="updates-status"><span>Последнее обновление: 23.10.2026</span><span>UTF-8</span></footer>`;
   win.querySelector('#updates-text').textContent=history;
   win.querySelector('#updates-download').href=URL.createObjectURL(new Blob([history],{type:'text/plain;charset=utf-8'}));
   document.querySelector('#desktop').append(win);TavernDesktop.registerWindow(win);

@@ -1,0 +1,61 @@
+.survivors-window{position:absolute;left:max(90px,calc(50% - 430px));top:55px;width:min(860px,calc(100vw - 110px));height:min(650px,calc(100dvh - 105px));display:flex;flex-direction:column;color:#000}
+.game-shortcuts>[data-survivors-open]{grid-column:1/-1;display:grid;grid-template-columns:40px minmax(0,1fr);gap:6px 14px;text-align:left;padding:12px}
+.game-shortcuts>[data-survivors-open]>img{grid-row:1/3}
+.game-shortcuts>[data-survivors-open]>small{text-align:left}
+.survivors-toolbar{display:flex;gap:5px;align-items:center;min-height:34px;padding:3px 5px;font:12px Arial;flex-shrink:0}
+.survivors-toolbar>button{border:0;background:none;padding:5px 9px;font:12px Arial;min-height:28px}
+.survivors-toolbar>button:hover{box-shadow:var(--border-out)}
+.survivors-toolbar>span{margin-left:auto;color:#444;font-size:11px}
+.survivors-hud{flex-shrink:0;background:#171d24;color:#eee4ce;padding:8px 12px;font:12px/1.5 'Courier New',monospace;border:2px solid #41464b}
+.survivors-hud-line{display:flex;justify-content:space-between;gap:10px;margin-bottom:5px;font-weight:bold}
+.survivors-meters{display:flex;gap:10px;align-items:center;font:10px Arial}
+.survivors-meters>span{white-space:nowrap;min-width:50px}
+.survivors-meters progress{appearance:none;flex:1;min-width:0;height:8px;border:0;background:#31333d;border-radius:0}
+.survivors-meters progress::-webkit-progress-bar{background:#31333d}
+.survivors-meters progress::-webkit-progress-value{background:#a34b59}
+.survivors-meters progress::-moz-progress-bar{background:#a34b59}
+#survivors-xp::-webkit-progress-value{background:#92c9b2}
+#survivors-xp::-moz-progress-bar{background:#92c9b2}
+.survivors-stage{position:relative;flex:1;min-height:120px;background:#171b22;overflow:hidden;box-shadow:var(--border-in)}
+#survivors-canvas{display:block;position:absolute;inset:0;width:100%;height:100%;image-rendering:pixelated;touch-action:none;outline:none}
+.survivors-overlay{position:absolute;inset:0;z-index:3;background:#10151de8;display:flex;align-items:center;justify-content:center;padding:16px;overflow:auto;color:#e8dfce}
+.survivors-panel{width:min(100%,620px);max-height:100%;overflow:auto;text-align:center;padding:20px 12px;overscroll-behavior:contain}
+.survivors-eyebrow{font:10px/1.7 'Courier New',monospace;letter-spacing:2px;color:#91bfa8}
+.survivors-panel h2{font:700 clamp(23px,4vw,38px)/1.15 Georgia,serif;margin:13px 0;color:#f1e3c7}
+.survivors-panel p{font:13px/1.7 Arial;margin:12px auto;max-width:420px;color:#c4c1b8}
+.survivors-panel .classic{min-height:44px;padding:10px 20px;font:bold 13px Arial}
+.survivors-panel .survivors-best{font:11px/1.7 'Courier New',monospace;color:#a8b8ad}
+.survivors-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:18px}
+.survivors-choices>button{background:#202b30;border:1px solid #738c7f;box-shadow:inset 0 0 0 3px #172025;color:#e7dfcb;text-align:left;padding:16px 13px;min-height:132px;font:12px/1.6 Arial}
+.survivors-choices>button:hover,.survivors-choices>button:focus-visible{background:#34473e;border-color:#c6d9ad}
+.survivors-choices strong{display:block;color:#cfdfad;font:700 16px/1.35 Georgia,serif;margin-bottom:10px}
+.survivors-touch{display:none;position:absolute;inset:auto 14px 14px;z-index:2;align-items:flex-end;justify-content:space-between;pointer-events:none}
+.survivors-touch>button{pointer-events:auto;touch-action:none;user-select:none;-webkit-user-select:none;color:#dfebdd;box-shadow:inset 0 0 0 2px #7c9588;background:#1e2b36b8;border:1px solid #a1b8a5}
+.survivors-stick{position:relative;width:92px;height:92px;border-radius:50%;padding:0}
+.survivors-stick>span{display:block;position:absolute;left:28px;top:28px;width:34px;height:34px;border-radius:50%;background:#90ad9b;border:2px solid #d5dbbc;pointer-events:none}
+.survivors-dash{width:74px;height:74px;border-radius:50%;font:bold 12px Arial}
+.survivors-touch>button:disabled{color:#b7c1b4;text-shadow:none;opacity:.75}
+.survivors-footer{display:flex;justify-content:space-between;gap:8px;padding:5px 7px;font:10px/1.4 Arial;min-height:25px;flex-shrink:0}
+.survivors-window.maximized{left:0!important;top:0!important;width:100vw!important;height:calc(100dvh - var(--taskbar-height,28px))!important}
+@media(pointer:coarse),(max-width:800px){
+  .survivors-touch{display:flex}
+  .survivors-footer .survivors-keys{display:none}
+  .survivors-choices{grid-template-columns:1fr;gap:8px}
+  .survivors-choices>button{min-height:74px;padding:11px 13px}
+  .survivors-choices strong{font-size:15px;margin-bottom:4px}
+  .survivors-panel{padding:10px 0}
+  .survivors-panel h2{font-size:27px}
+  .survivors-toolbar{min-height:40px}
+  .survivors-toolbar>button{min-height:34px}
+  .survivors-hud{padding:7px 9px}
+  .survivors-toolbar>span{font-size:10px}
+}
+@media(max-height:500px){
+  .survivors-stick{width:66px;height:66px}
+  .survivors-stick>span{left:16px;top:16px}
+  .survivors-dash{width:58px;height:58px}
+  .survivors-overlay{padding:8px}
+  .survivors-panel h2{font-size:23px;margin:6px 0}
+  .survivors-panel p{margin:6px auto;font-size:12px}
+  .survivors-choices{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
