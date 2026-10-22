@@ -1,0 +1,48 @@
+/* Character cards and the Renri OS property sheet use original Win98 icons. */
+.tree:before{height:143px}
+.bot-layout{display:grid;grid-template-columns:minmax(100px,190px) minmax(0,1fr);gap:20px}
+.bot-portrait{margin:0;min-width:0}
+.bot-portrait>a{display:block;box-shadow:var(--border-in);padding:3px;background:#808080}
+.bot-portrait img{display:block;width:100%;height:auto;image-rendering:auto}
+.bot-copy{min-width:0;padding-top:7px}
+.bot-copy h2{font:700 30px/1.2 Georgia,'Times New Roman',serif;margin:8px 0;color:#222244}
+.bot-download-row,.bot-import{grid-column:1/-1}
+.bot-import{margin:0}
+.system-window{position:absolute;left:max(100px,calc(50% - 205px));top:85px;width:410px;max-width:calc(100vw - 20px);display:flex;flex-direction:column;color:#000;font:12px Arial}
+.system-content{padding:14px 10px 10px;min-height:0;overflow:auto;flex:1}
+.system-tab{display:inline-block;position:relative;z-index:1;padding:7px 13px 6px;margin-bottom:-2px;background:#c0c0c0;border:1px solid;border-color:#fff #808080 #c0c0c0 #fff;border-radius:3px 3px 0 0;font:12px Arial}
+.system-sheet{border:1px solid;border-color:#fff #808080 #808080 #fff;padding:26px 22px;display:grid;grid-template-columns:76px minmax(0,1fr);gap:22px 16px;min-height:300px}
+.system-mark{display:flex;align-items:center;flex-direction:column;gap:10px;font:bold 13px Arial;color:#000080;padding-top:4px}
+.system-mark img{width:48px;height:48px;image-rendering:pixelated}
+.system-version>p{margin:0 0 6px;font:12px/1.6 Arial}
+.system-edition{margin:0 0 0 10px;font:12px/1.6 Arial;color:#000}
+.system-edition span{display:block;font:inherit;color:#000;margin-top:0}
+.system-facts{grid-column:2;margin:0;font:12px/1.6 Arial}
+.system-facts>div+div{margin-top:15px}
+.system-facts dt{color:#000;margin-bottom:3px}
+.system-facts dd{margin:0 0 0 10px;font-weight:normal;overflow-wrap:anywhere}
+.system-footer{padding:0 10px 10px;display:flex;justify-content:flex-end;flex-shrink:0}
+.system-footer>.classic{min-width:80px;min-height:28px;font:12px Arial}
+@media(min-width:801px){
+  .desktop-icons{bottom:calc(var(--taskbar-height,36px) + 12px);flex-wrap:wrap;align-content:flex-start;column-gap:6px}
+  .desktop-icons>.desktop-icon{width:77px;flex-shrink:0}
+  .start-menu{max-height:calc(100dvh - var(--taskbar-height,36px) - 10px)}
+  .start-menu nav{overflow:auto}
+}
+@media(max-width:800px){
+  .bot-layout{grid-template-columns:100px minmax(0,1fr);gap:16px 12px;padding:14px 12px}
+  .bot-copy{padding-top:0}
+  .bot-copy h2{font-size:25px;margin-top:5px}
+  .bot-copy .preset-description{font-size:13px;line-height:1.65;margin:10px 0 0}
+  .bot-copy .preset-edition{font-size:8px;letter-spacing:.3px}
+  .bot-download-row{gap:8px}
+  .bot-download-row>.preset-download{flex:1;justify-content:center;padding:8px 5px;white-space:nowrap;gap:5px;min-width:0;font-size:12px}
+  .bot-download-row img{width:20px;height:20px}
+  .bot-import{font-size:12px;line-height:1.7}
+  .system-content{padding-top:12px}
+  .system-sheet{grid-template-columns:62px minmax(0,1fr);gap:20px 12px;padding:22px 14px;min-height:0}
+  .system-facts{font-size:14px}
+  .system-facts>div+div{margin-top:20px}
+  .system-version>p,.system-edition{font-size:14px}
+  .system-footer>.classic{min-height:44px;min-width:90px;font-size:14px}
+}

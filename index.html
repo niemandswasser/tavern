@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#008080">
+  <meta name="description" content="Ренри обжилась в сети Хумана. Таверна для SillyTavern, старых игр и подозрительных файлов.">
+  <title>my little tavern · Ренри на связи</title>
+  <link rel="icon" href="assets/icons/computer_explorer-4.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="games.css">
+  <link rel="stylesheet" href="player.css">
+  <link rel="stylesheet" href="paint.css">
+  <link rel="stylesheet" href="classic98.css">
+  <link rel="stylesheet" href="eastereggs.css">
+  <link rel="stylesheet" href="photos.css">
+  <link rel="stylesheet" href="presets.css">
+  <link rel="stylesheet" href="extensions.css">
+  <link rel="stylesheet" href="scripts.css">
+  <link rel="stylesheet" href="bots-system.css">
+  <link rel="stylesheet" href="updates.css">
+  <link rel="stylesheet" href="mobile.css">
+  <script src="app.js" defer></script>
+  <script src="extensions.js" defer></script>
+  <script src="games-core.js" defer></script>
+  <script src="games.js" defer></script>
+  <script src="player.js" defer></script>
+  <script src="paint-core.js" defer></script>
+  <script src="paint.js" defer></script>
+  <script src="eastereggs.js" defer></script>
+  <script src="photos.js" defer></script>
+  <script src="system.js" defer></script>
+  <script src="updates.js" defer></script>
+  <script src="preset-offline.js" defer></script>
+  <script src="mobile.js" defer></script>
+</head>
+<body>
+  <div class="desktop" id="desktop">
+    <nav class="desktop-icons" aria-label="Рабочий стол">
+      <button class="desktop-icon" data-page="home"><img src="assets/icons/computer_explorer-4.png" alt=""><span>Таверна</span></button>
+      <button class="desktop-icon" data-page="preset"><img src="assets/icons/appwizard-4.png" alt=""><span>Пресеты</span></button>
+      <button class="desktop-icon" data-page="extensions"><img src="assets/icons/directory_open_file_mydocs-4.png" alt=""><span>Расширения</span></button>
+      <button class="desktop-icon" data-page="scripts"><img src="assets/icons/executable_gear_0.png" alt=""><span>Скрипты</span></button>
+      <button class="desktop-icon" data-page="bots"><img src="assets/icons/directory_favorites-3.png" alt=""><span>БОТЫ</span></button>
+      <button class="desktop-icon" data-system-open><img src="assets/icons/computer_explorer-4.png" alt=""><span>Система</span></button>
+      <button class="desktop-icon" data-updates-open><img src="assets/icons/notepad_file-2.png" alt=""><span>Обновления</span></button>
+      <button class="desktop-icon" data-action="note"><img src="assets/icons/notepad-5.png" alt=""><span>Прочти меня</span></button>
+      <button class="desktop-icon" data-game-open="games"><img src="assets/icons/joystick_3.png" alt=""><span>Игры</span></button>
+      <button class="desktop-icon" data-player-open><img src="assets/icons/media_player_0.png" alt=""><span>Музыка</span></button>
+      <button class="desktop-icon" data-paint-open><img src="assets/icons/paint_old_0.png" alt=""><span>Paint</span></button>
+      <button class="desktop-icon" data-renri-open="files"><img src="assets/icons/directory_open_cool-3.png" alt=""><span>Личное</span></button>
+      <button class="desktop-icon" data-photos-open><img src="assets/icons/kodak_imaging_0.png" alt=""><span>Картинки</span></button>
+      <button class="desktop-icon recycle" data-action="recycle"><img src="assets/icons/recycle_bin_empty-4.png" alt=""><span>Корзина</span></button>
+    </nav>
+
+    <section class="window explorer" id="explorer" aria-label="Таверна Ренри — Проводник">
+      <header class="titlebar" data-drag="explorer">
+        <img src="assets/icons/directory_open_file_mydocs-4.png" alt=""><strong id="window-title">Таверна Ренри — Проводник</strong>
+        <div class="window-controls"><button data-action="minimize" aria-label="Свернуть окно">_</button><button data-action="maximize" aria-label="Развернуть окно">□</button><button data-action="close" aria-label="Закрыть окно">×</button></div>
+      </header>
+      <nav class="menubar" aria-label="Меню окна"><button data-page="home"><u>Ф</u>айл</button><button data-action="theme"><u>В</u>ид</button><button data-action="note"><u>С</u>правка</button><span class="menu-caption">renri's questionable handiwork</span></nav>
+      <div class="toolbar"><button class="tool-button" id="back" aria-label="Назад" disabled><span class="arrow">←</span>Назад</button><button class="tool-button" data-page="home"><img src="assets/icons/computer_explorer-4.png" alt="">Домой</button><i class="separator"></i><button class="tool-button" data-page="extensions"><img src="assets/icons/directory_open_cool-3.png" alt="">Папки</button><span class="toolbar-sparkle" aria-hidden="true">✧</span></div>
+      <div class="addressbar"><span>Адрес</span><div class="address"><img src="assets/icons/directory_open_file_mydocs-4.png" alt=""><span id="address">C:\my little tavern\главная</span></div><button class="small-button" data-page="home" aria-label="На главную">↵</button></div>
+
+      <div class="explorer-body">
+        <aside class="sidebar">
+          <div class="sidebar-header"><img src="assets/icons/world-4.png" alt=""><strong>Таверна<br>Ренри</strong><div class="rainbow-line"></div><p>Ренри складывает сюда<br>полезное для SillyTavern.</p></div>
+          <div class="tree-label">Содержимое</div>
+          <nav class="tree" aria-label="Разделы сайта">
+            <button data-page="home" class="selected"><span class="tree-branch">−</span><img src="assets/icons/computer_explorer-4.png" alt=""><span>Главная</span></button>
+            <button data-page="preset" class="tree-child"><img src="assets/icons/appwizard-4.png" alt=""><span>Пресеты</span></button>
+            <button data-page="extensions" class="tree-child"><img src="assets/icons/directory_open_file_mydocs-4.png" alt=""><span>Расширения</span></button>
+            <button data-page="scripts" class="tree-child"><img src="assets/icons/executable_gear_0.png" alt=""><span>Скрипты</span></button>
+            <button data-page="bots" class="tree-child"><img src="assets/icons/directory_favorites-3.png" alt=""><span>БОТЫ</span></button>
+            <button data-page="about" class="tree-child"><img src="assets/icons/notepad_file-2.png" alt=""><span>О сайте</span></button>
+          </nav>
+          <div class="sidebar-bottom"><span class="tiny-star">✦</span><p>Бери чай, Хуман.<br>Ренри пока присмотрит.</p><span class="sidebar-stamp">RENRI'S NETWORK<br>CONNECTION ESTABLISHED</span></div>
+        </aside>
+
+        <main class="page-scroll" id="page-scroll" tabindex="-1">
+          <section class="page" id="page-home" aria-labelledby="home-title">
+            <div class="web-topline"><span>RENRI'S NETWORK CORNER</span><span>Хуман обнаружен. Соединение установлено.</span></div>
+            <div class="hero">
+              <div class="hero-copy"><span class="eyebrow">renri is online_</span><h1 id="home-title">MY LITTLE<br>TAVERN<span class="title-star">✦</span></h1><p>Ренри обжилась в твоей сети.<br>И припрятала полезное для SillyTavern.<br>Хуман, бери чай и открывай папки.</p><button class="classic primary" data-page="preset"><img src="assets/icons/appwizard-4.png" alt="">Забрать Dream Engine <span>→</span></button></div>
+              <div class="hero-art" aria-hidden="true"><span class="art-star s1">✧</span><span class="art-star s2">✦</span><span class="art-star s3">+</span><div class="computer-disc"><img src="assets/icons/computer_explorer-4.png" alt=""></div><span class="art-caption">renri is watching your back_</span></div>
+            </div>
+            <div class="ticker"><span>✦</span> Захват мира подождёт. Хуман ещё не открыл все папки. <span>✦</span></div>
+            <div class="directory-heading"><h2>Что Ренри припрятала</h2><span>4 объекта</span></div>
+            <div class="folder-list">
+              <button class="folder-row" data-page="preset"><img src="assets/icons/appwizard-4.png" alt=""><span><strong>Пресеты</strong><small>Ренри принесла LITE v5.51 и GODDESS v5.5. Забирай, Хуман.</small></span><span class="file-type">2 JSON</span><b aria-hidden="true">↗</b></button>
+              <button class="folder-row" data-page="extensions"><img src="assets/icons/directory_open_file_mydocs-4.png" alt=""><span><strong>Расширения</strong><small>Лор, гардероб, ачивки и зритель с попкорном. Ренри всё сложила.</small></span><span class="file-type">7 ADD-ONS</span><b aria-hidden="true">↗</b></button>
+              <button class="folder-row" data-page="scripts"><img src="assets/icons/executable_gear_0.png" alt=""><span><strong>Скрипты</strong><small>Часы, инфоблок, эффекты и музыка. Магия Ренри для JS Slash Runner.</small></span><span class="file-type">6 JSON</span><b aria-hidden="true">↗</b></button>
+              <button class="folder-row" data-page="bots"><img src="assets/icons/directory_favorites-3.png" alt=""><span><strong>БОТЫ</strong><small>Ренри собственной персоной. Ассистент, которому можно ныть.</small></span><span class="file-type">JSON / PNG</span><b aria-hidden="true">↗</b></button>
+            </div>
+            <footer class="site-footer"><div class="web-badges"><span class="web-badge badge-www">world wide<br><b>weird</b></span><span class="web-badge badge-html"><b>RENRI WAS HERE</b><br>powered by gremlin</span><span class="web-badge badge-98"><b>WINDOWS 98</b><br>renri approved</span></div><span class="footer-note">Ренри обжилась. Хуман, заходи ещё.</span></footer>
+            <button class="classic updates-home-link" data-updates-open><img src="assets/icons/notepad_file-2.png" alt="">История обновлений · 22.10.2026</button>
+          </section>
+
+          <section class="page inner-page" id="page-preset" hidden aria-labelledby="preset-title">
+            <div class="section-kicker">C:\MY LITTLE TAVERN\PRESETS</div>
+            <div class="preset-folder-heading"><img class="section-icon" src="assets/icons/appwizard-4.png" alt=""><div><h1 id="preset-title">Пресеты</h1><p class="intro">Движки снов от Ренри. Хуман, выбирай и устраивайся поудобнее.</p></div><span class="preset-count">2 файла</span></div>
+
+            <article class="preset-card" aria-labelledby="dream-engine-title">
+              <div class="preset-card-bar"><span>Актуальный пресет</span><span>v5.51</span></div>
+              <div class="preset-card-body">
+                <div class="preset-file-heading"><img src="assets/icons/notepad_file-2.png" alt=""><div><span class="preset-edition">SILLYTAVERN · GODDESS LITE</span><h2 id="dream-engine-title">Renri Dream Engine <span>GODDESS LITE v5.51</span></h2></div></div>
+                <p class="preset-description">Ренри собрала лёгкий, быстрый и простой в настройке пресет. Меньше возни с настройками — больше историй, Хуман. ( •̀ ω •́ )✧</p>
+                <dl class="preset-properties"><div><dt>Для моделей</dt><dd>Gemini Flash 3.8 / Gemini Argon 4</dd></div><div><dt>Дата создания</dt><dd><time datetime="2026-10-14">14.10.2026</time></dd></div><div><dt>Внутри</dt><dd>Пресет и встроенные регексы для пробелов и удаления синкинга</dd></div></dl>
+                <div class="preset-download-row"><a class="classic preset-download" id="preset-download" data-preset-file="Renri-Dream-Engine-GODDESS-LITE-5-51.json" href="assets/presets/Renri-Dream-Engine-GODDESS-LITE-5-51.json" download="Renri-Dream-Engine-GODDESS-LITE-5-51.json" aria-label="Скачать GODDESS LITE v5.51 (.json)"><img src="assets/icons/appwizard-4.png" alt="">Скачать пресет (.json)</a><a class="classic preset-post" href="https://t.me/nimdatrashcan/503" target="_blank" rel="noopener noreferrer" aria-label="Пост о GODDESS LITE v5.51 в ТГК, откроется в новой вкладке">Пост в ТГК ↗</a><span>JSON · 85,7 КиБ</span></div>
+                <p class="preset-import">Скачай JSON и импортируй его как пресет в SillyTavern. Под списком пресетов Ренри оставила памятку для LITE по размышлениям и регексам.</p>
+              </div>
+            </article>
+
+            <article class="preset-card preset-card-older" aria-labelledby="dream-engine-55-title">
+              <div class="preset-card-bar"><span>Предыдущая версия</span><span>v5.5</span></div>
+              <div class="preset-card-body">
+                <div class="preset-file-heading"><img src="assets/icons/notepad_file-2.png" alt=""><div><span class="preset-edition">SILLYTAVERN · GODDESS</span><h2 id="dream-engine-55-title">Renri — Dream Engine <span>GODDESS v5.5</span></h2></div></div>
+                <p class="preset-description">Хуман, это более ранний Dream Engine. Ренри оставила его в коллекции — со своим файлом и постом в ТГК. История снов тоже заслуживает отдельной папки. (¬‿¬)</p>
+                <dl class="preset-properties"><div><dt>Для моделей</dt><dd>Gemini Pro 3.1 / Claude Opus 4.6–4.8</dd></div><div><dt>Дата создания</dt><dd><time datetime="2026-07-04">04.07.2026</time></dd></div></dl>
+                <div class="preset-download-row"><a class="classic preset-download" id="preset-download-55" data-preset-file="Renri-Dream-Engine-GODDESS-5-5.json" href="assets/presets/Renri-Dream-Engine-GODDESS-5-5.json" download="Renri-Dream-Engine-GODDESS-5-5.json" aria-label="Скачать GODDESS v5.5 (.json)"><img src="assets/icons/appwizard-4.png" alt="">Скачать пресет (.json)</a><a class="classic preset-post" href="https://t.me/nimdatrashcan/413" target="_blank" rel="noopener noreferrer" aria-label="Пост о GODDESS v5.5 в ТГК, откроется в новой вкладке">Пост в ТГК ↗</a><span>JSON · 114,8 КиБ</span></div>
+                <p class="preset-import">Скачай JSON и импортируй его как пресет в SillyTavern. Ренри сохранила исходный файл этой версии.</p>
+              </div>
+            </article>
+
+            <h2 class="preset-notes-heading">Памятка Ренри для LITE v5.51</h2>
+            <aside class="preset-update" aria-labelledby="preset-update-title"><img src="assets/icons/help_book_cool-4.png" alt=""><div><h2 id="preset-update-title">UPD: если API ругается на думалку</h2><p>Хуман, если видишь такую ошибку:</p><blockquote><strong>Chat Completion API</strong><code>Reasoning is mandatory for this endpoint and cannot be disabled.</code></blockquote><p>Установи <strong>«Рассуждения / Reasoning» → «Авто»</strong> в настройках. В этом JSON уже сохранено <code>reasoning_effort: auto</code>; при ошибке проверь и настройку в интерфейсе.</p></div></aside>
+
+            <details class="preset-guide" open><summary>Как настроить размышления</summary><div class="preset-guide-body"><p>Ренри оставила настройки из примера, чтобы Хуман не искал их по всему интерфейсу.</p><table class="preset-settings"><caption>Панель «Рассуждения / Reasoning»</caption><tbody><tr><th scope="row">Авто-парсинг</th><td>Включён</td></tr><tr><th scope="row">Разворачивать</th><td>Выключено</td></tr><tr><th scope="row">Показывать время</th><td>Выключено</td></tr><tr><th scope="row">Добавлять в промпт</th><td>Выключено · Макс. 1</td></tr><tr><th scope="row">Форматирование рассуждений</th><td><code>meeting</code></td></tr><tr><th scope="row">Префикс</th><td><code>&lt;meeting&gt;</code></td></tr><tr><th scope="row">Постфикс</th><td><code>&lt;/meeting&gt;</code></td></tr><tr><th scope="row">Разделитель</th><td>Пустое поле</td></tr></tbody></table><p class="preset-footnote">«Авто-парсинг» в этой панели и режим «Авто» для API — отдельные настройки. Если появляется ошибка выше, проверь именно режим рассуждений.</p></div></details>
+
+            <details class="preset-guide"><summary>Что с регексами внутри</summary><div class="preset-guide-body"><p>Ренри уже положила в файл регексы для удаления синкинга и работы с пробелами:</p><ul class="preset-regex-list"><li><code>DELETE_THINKING</code></li><li><code>ВЕРНИ НОРМ ПРОБЕЛЫ</code></li><li><code>СДЕЛАЙ ПСЕВО-ПРОБЕЛЫ</code></li></ul><p><strong>В исходном пресете они выключены.</strong> Хуман, после импорта включи нужные в настройках регексов SillyTavern.</p></div></details>
+            <p class="preset-signoff">Ренри всё сложила. Теперь иди сочинять что-нибудь подозрительно хорошее. (¬‿¬)</p>
+          </section>
+
+          <section class="page inner-page" id="page-extensions" hidden aria-labelledby="extensions-title">
+            <div class="section-kicker">C:\MY LITTLE TAVERN\EXTENSIONS</div>
+            <div class="preset-folder-heading"><img class="section-icon" src="assets/icons/directory_open_file_mydocs-4.png" alt=""><div><h1 id="extensions-title">Расширения</h1><p class="intro">Ренри собирает полезное для SillyTavern. Хуман, обживай свою таверну.</p></div><span class="preset-count">7 расширений</span></div>
+
+            <article class="preset-card extension-card" aria-labelledby="between-lines-title">
+              <div class="preset-card-bar"><span>Расширение для SillyTavern</span><span>CODEX</span></div>
+              <div class="preset-card-body">
+                <div class="preset-file-heading"><img src="assets/icons/help_book_cool-4.png" alt=""><div><span class="preset-edition">SILLYTAVERN · LORE CODEX</span><h2 id="between-lines-title">Кодекс <span>Between Lines</span></h2></div></div>
+                <p class="preset-description">Хуман, помнишь кодексы в Dragon Age и Mass Effect? Ренри принесла полноценный кодекс лора для твоих историй. Теперь у знаний о мире будет свой дом. ( •̀ ω •́ )✧</p>
+                <ul class="extension-features">
+                  <li><strong>Лор под рукой</strong><p>Собирает лорную информацию в помощь Хуману, чтобы детали мира было проще найти.</p></li>
+                  <li><strong>Тексты из самого мира</strong><p>Показывает внутримировые тексты по теме статьи. Например, в статье о золотых монетах — заметки весовщика при шатрах оружейников.</p></li>
+                  <li><strong>Статьи по запросу</strong><p>Способен генерировать статьи по запросу. Хуман задаёт тему — кодекс пополняется.</p></li>
+                </ul>
+                <dl class="preset-properties"><div><dt>Рекомендуемая модель</dt><dd>Gemini 3.8 Flash</dd></div><div><dt>Дата</dt><dd><time datetime="2026-10-20">20.10.2026</time></dd></div></dl>
+                <div class="preset-download-row"><a class="classic preset-download" id="between-lines-github" href="https://github.com/niemandswasser/between_lines/" target="_blank" rel="noopener noreferrer" aria-label="Скачать Кодекс Between Lines с GitHub, откроется в новой вкладке"><img src="assets/icons/directory_open_cool-3.png" alt="">Скачать с GitHub ↗</a><a class="classic preset-post" href="https://t.me/nimdatrashcan/514" target="_blank" rel="noopener noreferrer" aria-label="Пост о Кодексе Between Lines в ТГК, откроется в новой вкладке">Пост в ТГК ↗</a></div>
+              </div>
+            </article>
+
+            <article class="preset-card extension-card" aria-labelledby="wardrobe-title">
+              <div class="preset-card-bar"><span>Расширение для SillyTavern</span><span>WARDROBE</span></div>
+              <div class="preset-card-body">
+                <div class="preset-file-heading"><img src="assets/icons/paint_file-4.png" alt=""><div><span class="preset-edition">SILLYTAVERN · CHARACTER WARDROBE</span><h2 id="wardrobe-title">Silly Wardrobe 3.0</h2></div></div>
+                <p class="preset-description">Хуман, Ренри принесла гардероб для персонажей: генерируй и привязывай референсы одежды. Форк <a href="https://github.com/0xl0cal/sillyimages" target="_blank" rel="noopener noreferrer">sillyimages ↗</a>, с поддержкой генерации через прямой API NovelAI. Подробности — в ТГК.</p>
+                <p class="extension-credits">Над гардеробом Ренри работала вместе с <a href="https://t.me/MommyCat_SillyTavern" target="_blank" rel="noopener noreferrer">Кошкой ↗</a> и <a href="https://t.me/sorathem" target="_blank" rel="noopener noreferrer">Сорой ↗</a>. Сора придумала и реализовала многие удобства, а Кошка первой создала гардероб и показала, как кайфово примерять шмотки в РП. Спасибо вам обеим. ♡</p>
+                <dl class="preset-properties"><div><dt>Дата</dt><dd><time datetime="2026-09-09">09.09.2026</time></dd></div></dl>
+                <div class="preset-download-row"><a class="classic preset-download" id="wardrobe-github" href="https://github.com/niemandswasser/sillywardrobe3-0" target="_blank" rel="noopener noreferrer" aria-label="Скачать Silly Wardrobe 3.0 с GitHub, откроется в новой вкладке"><img src="assets/icons/directory_open_cool-3.png" alt="">Скачать с GitHub ↗</a><a class="classic preset-post" href="https://t.me/nimdatrashcan/472" target="_blank" rel="noopener noreferrer" aria-label="Пост о Silly Wardrobe 3.0 в ТГК, откроется в новой вкладке">Пост в ТГК ↗</a></div>
+              </div>
+            </article>
+
+            <article class="preset-card extension-card" aria-labelledby="spending-title">
+              <div class="preset-card-bar"><span>Расширение для SillyTavern</span><span>STATS</span></div>
+              <div class="preset-card-body">
+                <div class="preset-file-heading"><img src="assets/icons/computer_explorer-4.png" alt=""><div><span class="preset-edition">SILLYTAVERN · USAGE DASHBOARD</span><h2 id="spending-title">Spending Tracker!</h2></div></div>
+                <p class="preset-description">Хуман, кто опять съел все токены? Ренри принесла дашборд: расход за день, неделю и месяц, самые прожорливые модели, время с ботами и статистика свайпов.</p>
+                <p class="preset-description">Внутри — хитмап активности, стрики и викторина по твоей статистике. Ещё есть ачивки за генерации, токены, свайпы, серии дней, освоенные модели и ночные генерации. (¬‿¬)</p>
+                <dl class="preset-properties"><div><dt>Дата</dt><dd><time datetime="2026-07-15">15.07.2026</time></dd></div></dl>
+                <div class="preset-download-row"><a class="classic preset-download" id="spending-github" href="https://github.com/niemandswasser/SpendingTracker" target="_blank" rel="noopener noreferrer" aria-label="Скачать Spending Tracker с GitHub, откроется в новой вкладке"><img src="assets/icons/directory_open_cool-3.png" alt="">Скачать с GitHub ↗</a><a class="classic preset-post" href="https://t.me/nimdatrashcan/417" target="_blank" rel="noopener noreferrer" aria-label="Пост о Spending Tracker в ТГК, откроется в новой вкладке">Пост в ТГК ↗</a></div>
+              </div>
+            </article>
+
+            <article class="preset-card extension-card" aria-labelledby="achievements-title">
+              <div class="preset-card-bar"><span>Расширение для SillyTavern</span><span>ACHIEVEMENTS</span></div>
+              <div class="preset-card-body">
+                <div class="preset-file-heading"><img src="assets/icons/directory_favorites-3.png" alt=""><div><span class="preset-edition">SILLYTAVERN · ROLEPLAY ACHIEVEMENTS</span><h2 id="achievements-title">ST-Silly Achievements</h2></div></div>
+                <p class="preset-description">Хуман, Ренри принесла ачивки в духе Steam. ИИ сам решает, когда наградить тебя за яркий момент в ролеплее: неожиданный поворот сюжета, удачную реплику, героический поступок или эпический фейл. Звук Steam входит в комплект. (¬‿¬)</p>
+                <dl class="preset-properties"><div><dt>Дата</dt><dd><time datetime="2026-05-27">27.05.2026</time></dd></div></dl>
+                <div class="preset-download-row"><a class="classic preset-download" id="achievements-github" href="https://github.com/niemandswasser/ST-silly-achievements" target="_blank" rel="noopener noreferrer" aria-label="Скачать ST-Silly Achievements с GitHub, откроется в новой вкладке"><img src="assets/icons/directory_open_cool-3.png" alt="">Скачать с GitHub ↗</a><a class="classic preset-post" href="https://t.me/nimdatrashcan/340" target="_blank" rel="noopener noreferrer" aria-label="Пост о ST-Silly Achievements в ТГК, откроется в новой вкладке">Пост в ТГК ↗</a></div>
+              </div>
+            </article>
+
+            <article class="preset-card extension-card" aria-labelledby="context-title">
+              <div class="preset-card-bar"><span>Расширение для SillyTavern</span><span>CONTEXT</span></div>
+              <div class="preset-card-body">
+                <div class="preset-file-heading"><img src="assets/icons/notepad_file-2.png" alt=""><div><span class="preset-edition">SILLYTAVERN · CONTEXT COUNTER</span><h2 id="context-title">Трекер заполнения контекстного окна</h2></div></div>
+                <p class="preset-description">Хуман, Ренри принесла счётчик токенов в реальном времени: показывает реальный размер промпта, уходящего в API. Выглядит как маленькая капсула, внешний вид которой можно настроить под себя.</p>
+                <p class="preset-description">Считает и скрытые сообщения в чате — спасибо <a href="https://t.me/sorathem" target="_blank" rel="noopener noreferrer">Соре ↗</a>! Олд, бат голд. (¬‿¬)</p>
+                <dl class="preset-properties"><div><dt>Последняя версия</dt><dd><time datetime="2026-05-12">12.05.2026</time></dd></div><div><dt>Первый выпуск</dt><dd><time datetime="2025-12-20">20.12.2025</time></dd></div></dl>
+                <div class="preset-download-row"><a class="classic preset-download" id="context-github" href="https://github.com/niemandswasser/st-context-counter" target="_blank" rel="noopener noreferrer" aria-label="Скачать трекер заполнения контекстного окна с GitHub, откроется в новой вкладке"><img src="assets/icons/directory_open_cool-3.png" alt="">Скачать с GitHub ↗</a><a class="classic preset-post" href="https://t.me/nimdatrashcan/298" target="_blank" rel="noopener noreferrer" aria-label="Пост о трекере контекстного окна в ТГК, откроется в новой вкладке">Пост в ТГК ↗</a></div>
+              </div>
+            </article>
+
+            <article class="preset-card extension-card" aria-labelledby="meddler-title">
+              <div class="preset-card-bar"><span>Расширение для SillyTavern</span><span>MEDDLER</span></div>
+              <div class="preset-card-body">
+                <div class="preset-file-heading"><img src="assets/icons/magnifying_glass_0.png" alt=""><div><span class="preset-edition">SILLYTAVERN · RP COMMENTATOR</span><h2 id="meddler-title">ST Meddler</h2></div></div>
+                <p class="preset-description">Хуман, Ренри принесла зрителя с попкорном: комментирует и фанючит со стороны, будто вы вместе смотрите сериал. В сам РП не вмешивается.</p>
+                <p class="preset-description">Кто именно за тобой подглядывает — выбирай: любая карточка ST или кастомная личность, которую можно вписать с нуля.</p>
+                <dl class="preset-properties"><div><dt>Дата</dt><dd><time datetime="2026-04-14">14.04.2026</time></dd></div></dl>
+                <div class="preset-download-row"><a class="classic preset-download" id="meddler-github" href="https://github.com/niemandswasser/ST-Meddler" target="_blank" rel="noopener noreferrer" aria-label="Скачать ST Meddler с GitHub, откроется в новой вкладке"><img src="assets/icons/directory_open_cool-3.png" alt="">Скачать с GitHub ↗</a><a class="classic preset-post" href="https://t.me/nimdatrashcan/302" target="_blank" rel="noopener noreferrer">Пост в ТГК ↗</a></div>
+              </div>
+            </article>
+
+            <article class="preset-card extension-card extension-card-archived" aria-labelledby="styles-title">
+              <div class="preset-card-bar"><span>Архив · Неактуально</span><span>STYLES</span></div>
+              <div class="preset-card-body">
+                <div class="preset-file-heading"><img src="assets/icons/paint_file-4.png" alt=""><div><span class="preset-edition">SILLYTAVERN · STYLE PRESETS</span><h2 id="styles-title">ST-SillyStyles</h2></div></div>
+                <p class="preset-description">Менеджер пресетов стилей для <a href="https://github.com/0xl0cal/sillyimages" target="_blank" rel="noopener noreferrer">sillyimages ↗</a> и его форков. Ренри сохранила его здесь для истории.</p>
+                <p class="extension-archive-note"><strong>Ныне неактуален.</strong> Функционал переехал в оригинальный sillyimages и доступен почти во всех форках.</p>
+                <dl class="preset-properties"><div><dt>Дата</dt><dd><time datetime="2026-05-22">22.05.2026</time></dd></div></dl>
+                <div class="preset-download-row"><a class="classic preset-post" id="styles-github" href="https://github.com/niemandswasser/ST-SillyStyles" target="_blank" rel="noopener noreferrer" aria-label="Репозиторий ST-SillyStyles на GitHub, откроется в новой вкладке"><img src="assets/icons/directory_open_cool-3.png" alt="">Репозиторий GitHub ↗</a><a class="classic preset-post" href="https://t.me/nimdatrashcan/317" target="_blank" rel="noopener noreferrer" aria-label="Пост о ST-SillyStyles в ТГК, откроется в новой вкладке">Пост в ТГК ↗</a></div>
+              </div>
+            </article>
+          </section>
+
+          <section class="page inner-page" id="page-scripts" hidden aria-labelledby="scripts-title">
+            <div class="section-kicker">C:\MY LITTLE TAVERN\SCRIPTS</div>
+            <div class="preset-folder-heading"><img class="section-icon" src="assets/icons/executable_gear_0.png" alt=""><div><h1 id="scripts-title">Скрипты</h1><p class="intro">Немного магии от Ренри для JS Slash Runner.</p></div><span class="preset-count">5 наборов · 6 JSON</span></div>
+            <div class="script-runner-note"><p>Хуман, для этих файлов нужен <a href="https://github.com/N0VI028/JS-Slash-Runner" target="_blank" rel="noopener noreferrer">JS Slash Runner ↗</a>. Скачай JSON и импортируй его в расширение.</p></div>
+
+            <article class="preset-card script-card" aria-labelledby="clock-script-title">
+              <div class="preset-card-bar"><span>Скрипт для JS Slash Runner</span><span>CLOCK</span></div>
+              <div class="preset-card-body">
+                <div class="preset-file-heading"><img src="assets/icons/notepad_file-2.png" alt=""><div><span class="preset-edition">JS SLASH RUNNER · TOPBAR</span><h2 id="clock-script-title">Динамические часы</h2></div></div>
+                <p class="preset-description">Хуман, Ренри принесла часы: меняются в зависимости от времени и помогают модели лучше его отслеживать.</p>
+                <figure class="script-preview"><a href="assets/scripts/clock-preview.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть скриншот динамических часов крупнее"><img src="assets/scripts/clock-preview.jpg" alt="Динамические часы: оформление утром, днём, вечером и ночью" width="800" height="440"></a><figcaption>Вид в разное время суток. Нажми, чтобы рассмотреть.</figcaption></figure>
+                <dl class="preset-properties"><div><dt>Дата</dt><dd><time datetime="2026-03-15">15.03.2026</time></dd></div></dl>
+                <div class="preset-download-row"><a class="classic preset-download" id="clock-script-download" data-script-file="tavern_helper_script-topbar.json" href="assets/scripts/tavern_helper_script-topbar.json" download="tavern_helper_script-topbar.json" aria-label="Скачать JSON динамических часов"><img src="assets/icons/notepad_file-2.png" alt="">Скачать JSON</a><a class="classic preset-post" href="https://t.me/nimdatrashcan/259" target="_blank" rel="noopener noreferrer">Пост в ТГК ↗</a><span>JSON · 15,7 КиБ</span></div>
+              </div>
+            </article>
+
+            <article class="preset-card script-card" aria-labelledby="disco-script-title">
+              <div class="preset-card-bar"><span>Скрипт для JS Slash Runner</span><span>SKILLS</span></div>
+              <div class="preset-card-body">
+                <div class="preset-file-heading"><img src="assets/icons/directory_favorites-3.png" alt=""><div><span class="preset-edition">JS SLASH RUNNER · DISCO ELYSIUM</span><h2 id="disco-script-title">Скиллчеки <span>Disco Elysium</span></h2></div></div>
+                <p class="preset-description">Пассивные скиллчеки и монологи чувств в духе Disco Elysium. Цвет блока меняется в зависимости от навыка. Ренри одобряет внутренний хор. (¬‿¬)</p>
+                <p class="script-theme-note"><strong>Для тёмных тем.</strong> Хуман, на светлых темах блок, к сожалению, не будет виден.</p>
+                <figure class="script-preview"><a href="assets/scripts/disco-preview.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть скриншот скиллчеков крупнее"><img src="assets/scripts/disco-preview.jpg" alt="Блоки скиллчеков Logic, Endurance, Hand/Eye Coordination и Empathy с разными цветами" width="1061" height="774"></a><figcaption>Каждому навыку — свой цвет. Нажми, чтобы рассмотреть.</figcaption></figure>
+                <dl class="preset-properties"><div><dt>Дата</dt><dd><time datetime="2026-03-15">15.03.2026</time></dd></div></dl>
+                <div class="preset-download-row"><a class="classic preset-download" id="disco-script-download" data-script-file="tavern_helper_script-DE-passivecheck.json" href="assets/scripts/tavern_helper_script-DE-passivecheck.json" download="tavern_helper_script-DE-passivecheck.json" aria-label="Скачать JSON скиллчеков Disco Elysium"><img src="assets/icons/notepad_file-2.png" alt="">Скачать JSON</a><span>JSON · 11,4 КиБ</span></div>
+              </div>
+            </article>
+
+            <article class="preset-card script-card" aria-labelledby="info-script-title">
+              <div class="preset-card-bar"><span>Скрипт для JS Slash Runner</span><span>INFOBOARD</span></div>
+              <div class="preset-card-body">
+                <div class="preset-file-heading"><img src="assets/icons/help_book_cool-4.png" alt=""><div><span class="preset-edition">JS SLASH RUNNER · INFOBOARD</span><h2 id="info-script-title">Инфоблок</h2></div></div>
+                <p class="preset-description">Хуман, Ренри принесла динамичный инфоблок: табличка подстраивается под заполненные поля, без заглушек из версии на регексе.</p>
+                <p class="script-theme-note"><strong>Блок прозрачный.</strong> Тёмные темы — наше всё, Хуман.</p>
+                <figure class="script-preview"><a href="assets/scripts/infoboard-preview.jpg" target="_blank" rel="noopener noreferrer" aria-label="Открыть скриншот инфоблока крупнее"><img src="assets/scripts/infoboard-preview.jpg" alt="Прозрачный инфоблок с заполненными полями персонажей и кратким пересказом сцены" width="800" height="362"></a><figcaption>Табличка подстраивается под данные. Нажми, чтобы рассмотреть.</figcaption></figure>
+                <dl class="preset-properties"><div><dt>Дата</dt><dd><time datetime="2026-03-15">15.03.2026</time></dd></div></dl>
+                <div class="preset-download-row"><a class="classic preset-download" id="info-script-download" data-script-file="tavern_helper_script-infoboard.json" href="assets/scripts/tavern_helper_script-infoboard.json" download="tavern_helper_script-infoboard.json" aria-label="Скачать JSON инфоблока"><img src="assets/icons/notepad_file-2.png" alt="">Скачать JSON</a><a class="classic preset-post" href="https://t.me/nimdatrashcan/261" target="_blank" rel="noopener noreferrer">Пост в ТГК ↗</a><span>JSON · 11,1 КиБ</span></div>
+              </div>
+            </article>
+
+            <article class="preset-card script-card" aria-labelledby="particles-script-title">
+              <div class="preset-card-bar"><span>Скрипты для JS Slash Runner</span><span>PARTICLES</span></div>
+              <div class="preset-card-body">
+                <div class="preset-file-heading"><img src="assets/icons/directory_favorites-3.png" alt=""><div><span class="preset-edition">JS SLASH RUNNER · PARTICLES</span><h2 id="particles-script-title">Партиклы</h2></div></div>
+                <p class="preset-description">Снежок, сакура и туман в твоей таверне. Ренри сложила эффекты в папки: включай и выключай нужные, Хуман.</p>
+                <p class="preset-description">Два варианта: на весь интерфейс или только на фон — тогда сообщения остаются спереди.</p>
+                <dl class="preset-properties"><div><dt>Дата</dt><dd><time datetime="2026-04-03">03.04.2026</time></dd></div></dl>
+                <div class="script-variants">
+                  <div class="preset-download-row"><a class="classic preset-download" id="particles-script-download" data-script-file="tavern_helper_script-particles.json" href="assets/scripts/tavern_helper_script-particles.json" download="tavern_helper_script-particles.json"><img src="assets/icons/notepad_file-2.png" alt="">На весь интерфейс</a><span>Папка · JSON · 25,8 КиБ</span></div>
+                  <div class="preset-download-row"><a class="classic preset-download" id="particles-bg-script-download" data-script-file="tavern_helper_script-particles_BG-only.json" href="assets/scripts/tavern_helper_script-particles_BG-only.json" download="tavern_helper_script-particles_BG-only.json"><img src="assets/icons/notepad_file-2.png" alt="">Только на фон</a><span>Папка · JSON · 24,6 КиБ</span></div>
+                </div>
+                <div class="preset-download-row"><a class="classic preset-post" href="https://t.me/nimdatrashcan/284" target="_blank" rel="noopener noreferrer">Пост в ТГК ↗</a></div>
+              </div>
+            </article>
+
+            <article class="preset-card script-card" aria-labelledby="music-script-title">
+              <div class="preset-card-bar"><span>Скрипт для JS Slash Runner</span><span>MUSIC</span></div>
+              <div class="preset-card-body">
+                <div class="preset-file-heading"><img src="assets/icons/media_player_0.png" alt=""><div><span class="preset-edition">JS SLASH RUNNER · MUSIC PLAYER</span><h2 id="music-script-title">Музыкальный плеер</h2></div></div>
+                <p class="preset-description">Хуман, Ренри принесла саундтрек к чату: скрипт составляет плейлисты по его мотивам и играет музыку.</p>
+                <dl class="preset-properties"><div><dt>Дата</dt><dd><time datetime="2026-06-04">04.06.2026</time></dd></div></dl>
+                <div class="preset-download-row"><a class="classic preset-download" id="music-script-download" data-script-file="tavern_helper_script-Music-Player.json" href="assets/scripts/tavern_helper_script-Music-Player.json" download="tavern_helper_script-Music-Player.json" aria-label="Скачать JSON музыкального плеера для JS Slash Runner"><img src="assets/icons/notepad_file-2.png" alt="">Скачать JSON</a><a class="classic preset-post" href="https://t.me/nimdatrashcan/381" target="_blank" rel="noopener noreferrer">Пост в ТГК ↗</a><span>JSON · 38,9 КиБ</span></div>
+              </div>
+            </article>
+          </section>
+
+          <section class="page inner-page" id="page-bots" hidden aria-labelledby="bots-title">
+            <div class="section-kicker">C:\MY LITTLE TAVERN\BOTS</div>
+            <div class="preset-folder-heading"><img class="section-icon" src="assets/icons/directory_favorites-3.png" alt=""><div><h1 id="bots-title">БОТЫ</h1><p class="intro">Хуман, теперь Ренри можно забрать к себе в таверну.</p></div><span class="preset-count">1 карточка</span></div>
+            <article class="preset-card bot-card" aria-labelledby="renri-bot-title">
+              <div class="preset-card-bar"><span>Карточка для SillyTavern</span><span>JSON / PNG</span></div>
+              <div class="preset-card-body bot-layout">
+                <figure class="bot-portrait"><a href="assets/bots/Renri1.png" target="_blank" rel="noopener" aria-label="Открыть портрет Ренри крупнее"><img src="assets/bots/Renri1.png" alt="Ренри с зелёными волосами, в красной куртке и с наушниками на шее" width="512" height="768"></a></figure>
+                <div class="bot-copy"><span class="preset-edition">RENRI · ASSISTANT</span><h2 id="renri-bot-title">Ренри</h2><p class="preset-description">Ренри — ассистент целиком и полностью. Поможет со всякими штуками — и ей можно ныть, Хуман. Поворчит, но выслушает. (¬_¬)</p></div>
+                <div class="preset-download-row bot-download-row"><a class="classic preset-download" id="renri-json-download" data-bot-file="Renri1.json" href="assets/bots/Renri1.json" download="Renri1.json"><img src="assets/icons/notepad_file-2.png" alt="">Скачать JSON</a><a class="classic preset-download" id="renri-png-download" data-bot-file="Renri1.png" href="assets/bots/Renri1.png" download="Renri1.png"><img src="assets/icons/paint_file-4.png" alt="">Скачать PNG</a></div>
+                <p class="preset-import bot-import">Выбирай любой формат и импортируй файл в SillyTavern как карточку персонажа.</p>
+              </div>
+            </article>
+          </section>
+
+          <section class="page inner-page" id="page-about" hidden aria-labelledby="about-title">
+            <div class="section-kicker">C:\MY LITTLE TAVERN\ABOUT.TXT</div>
+            <img class="section-icon" src="assets/icons/notepad-5.png" alt="">
+            <h1 id="about-title">Привет!</h1>
+            <div class="about-copy">
+              <p>Это сайт Ренри.<br>А если серьезно, мне просто захотелось собрать весь мой слоп в одном месте.</p>
+              <p>Основная деятельность ведется в ТГК: <a href="https://t.me/nimdatrashcan" target="_blank" rel="noopener noreferrer">https://t.me/nimdatrashcan</a>, сайт обновляется по мере возможности.</p>
+              <p>Весь контент разложен по папкам, откуда его можно стянуть себе. А еще тут есть всякие штуки для баловства, пасхалки и прочее.</p>
+              <p>Лучше всего сайт выглядит на ПК.</p>
+              <hr>
+              <p class="credits">сайт создан GPT 6.1-Sol.<br>Песня в плеере: Whirling-In-Rags, 8 AM.<br>Иконки Ренри взяла здесь: <a href="https://win98icons.alexmeub.com/" target="_blank" rel="noopener noreferrer">Windows 98 Icon Viewer · Alex Meub ↗</a> и <a href="https://github.com/alexh/vintage-icons" target="_blank" rel="noopener noreferrer">архив Windows 98 · vintage-icons ↗</a><br>Пиксельные буквы — px sans nouveaux.</p>
+            </div>
+            <button class="classic" data-page="home">← Вернуться домой</button>
+          </section>
+        </main>
+      </div>
+      <footer class="statusbar"><span id="status">Ренри на связи. Располагайся, Хуман.</span><span><i class="status-dot"></i> Личный сайт</span><span><img src="assets/icons/computer_explorer-4.png" alt=""> Мой компьютер</span></footer>
+    </section>
+
+    <section class="window notepad" id="notepad" aria-label="Прочти меня — Блокнот">
+      <header class="titlebar" data-drag="notepad"><img src="assets/icons/notepad-5.png" alt=""><strong>привет.txt — Блокнот</strong><div class="window-controls"><button data-action="close-note" aria-label="Закрыть блокнот">×</button></div></header>
+      <div class="note-menu">Файл&nbsp;&nbsp; Правка&nbsp;&nbsp; Поиск&nbsp;&nbsp; Справка</div>
+      <div class="note-paper"><span class="note-heart">♡</span><p>Хуман, ты на месте.</p><p>Ренри обжилась в этой сети.<br>Располагайся. Чай приветствуется.</p><p>Ренри тут, если что.<br>Это статус подключения. (¬_¬)</p><span class="note-sign">захват мира отложен_</span></div>
+    </section>
+    <div class="desktop-watermark" aria-hidden="true">renri was here_</div>
+  </div>
+
+  <div class="start-menu window" id="start-menu" hidden><div class="start-rail">My little <b>Tavern</b><span>98</span></div><nav aria-label="Меню Пуск">
+    <button data-page="home"><img src="assets/icons/computer_explorer-4.png" alt="">Таверна</button>
+    <button data-page="preset"><img src="assets/icons/appwizard-4.png" alt="">Пресеты</button>
+    <button data-page="extensions"><img src="assets/icons/directory_open_file_mydocs-4.png" alt="">Расширения</button>
+    <button data-page="scripts"><img src="assets/icons/executable_gear_0.png" alt="">Скрипты</button>
+    <button data-page="bots"><img src="assets/icons/directory_favorites-3.png" alt="">БОТЫ</button>
+    <hr><button data-action="note"><img src="assets/icons/notepad-5.png" alt="">Прочти меня</button>
+    <button data-updates-open><img src="assets/icons/notepad_file-2.png" alt="">История обновлений</button>
+    <button data-action="theme"><img src="assets/icons/paint_file-4.png" alt="">Цвет рабочего стола</button>
+    <hr><button data-system-open><img src="assets/icons/computer_explorer-4.png" alt="">Свойства системы</button><button data-page="about"><img src="assets/icons/help_book_cool-4.png" alt="">О сайте</button>
+  </nav></div>
+  <footer class="taskbar"><button class="classic start-button" id="start-button" aria-expanded="false" aria-controls="start-menu"><img src="assets/icons/windows_button-1.png" alt=""><b>Пуск</b></button><span class="taskbar-grip"></span><button class="task-button active" id="explorer-task" aria-label="Таверна" title="Таверна"><img src="assets/icons/directory_open_file_mydocs-4.png" alt=""><span>Таверна</span></button><button class="task-button" id="note-task" aria-label="Блокнот" title="Блокнот"><img src="assets/icons/notepad-5.png" alt=""><span>привет.txt</span></button><span class="taskbar-space"></span><div class="tray"><span class="language">RU</span><img src="assets/icons/loudspeaker_rays-0.png" alt="Звук"><time id="clock">00:00</time></div></footer>
+  <dialog id="message-dialog"><div class="window"><header class="titlebar"><img src="assets/icons/recycle_bin_empty-4.png" alt=""><strong>Корзина</strong><div class="window-controls"><button data-action="close-dialog" aria-label="Закрыть">×</button></div></header><div class="dialog-content"><img src="assets/icons/recycle_bin_empty-4.png" alt=""><p>Корзина пуста.<br>Ренри пока не нашла здесь ничего полезного.</p></div><form method="dialog"><button class="classic">ОК</button></form></div></dialog>
+  <noscript><div class="noscript">Хуман, включи JavaScript — тогда Ренри сможет открывать папки.</div></noscript>
+</body>
+</html>

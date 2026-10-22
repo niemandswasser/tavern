@@ -1,0 +1,74 @@
+[
+  {
+    "file": "media_player_0.png",
+    "size": [
+      32,
+      32
+    ],
+    "source": "https://raw.githubusercontent.com/alexh/vintage-icons/main/static/icons/media_player_0.png",
+    "sha256": "b30414eb9e38eeb924e4827489a15941a5db5c3dc1a49c9a00604e659965ad5a"
+  },
+  {
+    "file": "paint_old_0.png",
+    "size": [
+      32,
+      32
+    ],
+    "source": "https://raw.githubusercontent.com/alexh/vintage-icons/main/static/icons/paint_old_0.png",
+    "sha256": "ecf0420050cf3870c503442c3a3aa44b2b80803ec637f181cd6fe70b3e185702"
+  },
+  {
+    "file": "kodak_imaging_0.png",
+    "size": [
+      32,
+      32
+    ],
+    "source": "https://raw.githubusercontent.com/alexh/vintage-icons/main/static/icons/kodak_imaging_0.png",
+    "sha256": "7c9726ef758c7181761a24abe0b6b3e53803bd42e053a58a336f1781692bc82d"
+  },
+  {
+    "file": "game_mine_1_0.png",
+    "size": [
+      32,
+      32
+    ],
+    "source": "https://raw.githubusercontent.com/alexh/vintage-icons/main/static/icons/game_mine_1_0.png",
+    "sha256": "02f12b20d0029c20ee62dd47e76ba5e009194f6887370055139e646f0affabaa"
+  },
+  {
+    "file": "game_solitaire_0.png",
+    "size": [
+      32,
+      32
+    ],
+    "source": "https://raw.githubusercontent.com/alexh/vintage-icons/main/static/icons/game_solitaire_0.png",
+    "sha256": "3a8c9e21ae06880339af8a38748d861ad1738ded6c2b62af6aebd4891414d0e4"
+  },
+  {
+    "file": "magnifying_glass_0.png",
+    "size": [
+      32,
+      32
+    ],
+    "source": "https://raw.githubusercontent.com/alexh/vintage-icons/main/static/icons/magnifying_glass_0.png",
+    "sha256": "92dcac7a73c3f221d2562c8b338cd3c6a331511cf2b96a2042dfd9398a44245b"
+  },
+  {
+    "file": "joystick_3.png",
+    "size": [
+      32,
+      32
+    ],
+    "source": "https://raw.githubusercontent.com/alexh/vintage-icons/main/static/icons/joystick_3.png",
+    "sha256": "44f990a2e53d39107c78dfb2b3bb11fb098acbb39c0aa26da40fb809efa9760f"
+  },
+  {
+    "file": "executable_gear_0.png",
+    "size": [
+      32,
+      32
+    ],
+    "source": "https://raw.githubusercontent.com/alexh/vintage-icons/main/static/icons/executable_gear_0.png",
+    "sha256": "0e3c3aba314ff86105dfe3aeadba19b1f648a197f5fcced829f9cf1369dbf4a1"
+  }
+]

@@ -1,0 +1,17 @@
+/* Extension entries share the preset catalog's Windows 98 file cards. */
+.extension-features{list-style:none;padding:0;margin:17px 0 20px;border-top:1px dotted #b9b9a9}
+.extension-features li{position:relative;padding:12px 0 12px 19px;border-bottom:1px dotted #d4d4c3}
+.extension-features li::before{content:'▪';position:absolute;left:1px;top:11px;color:#000080;font-size:14px}
+.extension-features strong{font:bold 12px/1.6 Arial;color:#272741}
+.extension-features p{font-size:11px;line-height:1.8;color:#53534a;margin:4px 0 0}
+.extension-card .preset-properties>div{grid-template-columns:140px minmax(0,1fr)}
+.extension-card .preset-download-row{margin-top:20px;margin-bottom:5px}
+.extension-copy{min-width:120px;min-height:35px}
+.extension-copy[data-copy-state="done"]{color:#005323}
+.extension-copy-announcement{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.extension-copy-manual{display:block;font-size:11px;line-height:1.7;padding:10px;margin-top:10px;background:#eeeedf;border:1px solid #c9c9b8}
+.extension-copy-manual input{display:block;box-sizing:border-box;width:100%;min-width:0;margin-top:6px;font:11px/1.6 'Courier New',monospace;padding:5px;border:0;box-shadow:var(--border-in);background:#fff;color:#000}
+.extension-credits{font-size:11px;line-height:1.8;color:#53534a;margin:16px 0 20px;padding:10px 0 0;border-top:1px dotted #b9b9a9}
+.extension-card-archived .preset-card-bar{background:linear-gradient(90deg,#555b62,#939aa1)}
+.extension-archive-note{font-size:11px;line-height:1.8;padding:10px 12px;margin:16px 0 20px;background:#ffffe1;border:1px solid #c6c6a6;color:#3b3b2e}
+@media(max-width:580px){.extension-card .preset-properties>div{grid-template-columns:105px minmax(0,1fr)}.extension-features li{padding-left:15px}}

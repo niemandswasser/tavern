@@ -1,0 +1,15 @@
+.updates-window{position:absolute;left:max(110px,calc(50% - 285px));top:105px;width:min(570px,calc(100vw - 120px));height:min(410px,calc(100dvh - 150px));min-height:180px;display:flex;flex-direction:column}
+.updates-filebar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:4px 6px;font:12px Arial;flex-shrink:0}
+.updates-filebar>.classic{min-height:28px;padding:5px 10px;font:12px Arial;text-decoration:none;color:#000}
+.updates-text{margin:0;flex:1;min-height:0;padding:12px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;background:#fff;color:#000;box-shadow:var(--border-in);font:14px/1.7 'Courier New',monospace;tab-size:4;overscroll-behavior:contain}
+.updates-status{display:flex;justify-content:space-between;gap:8px;padding:5px 6px 2px;font:11px Arial;flex-shrink:0}
+.updates-window.maximized{left:0!important;top:0!important;width:100vw!important;height:calc(100dvh - var(--taskbar-height,36px))!important}
+.updates-home-link{margin-bottom:24px;min-height:35px;font:11px Arial}
+.updates-home-link img{width:20px;height:20px}
+@media(max-width:800px){
+  .updates-filebar{min-height:48px;font-size:12px}
+  .updates-filebar>.classic{min-height:40px}
+  .updates-text{font-size:15px;padding:14px 12px}
+  .updates-status{font-size:10px;line-height:1.5;flex-wrap:wrap}
+  .updates-home-link{min-height:44px;font-size:12px}
+}

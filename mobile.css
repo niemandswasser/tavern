@@ -1,0 +1,154 @@
+/* Mobile is a compact desktop: a workspace, Start, and readable running tasks. */
+.taskbar-apps{display:contents}
+.mobile-desktop-button,.mobile-folder,.mobile-start-extra,.mobile-start-backdrop{display:none}
+.start-menu nav>.mobile-start-extra{display:none}
+@media(max-width:800px){
+  :root{--taskbar-height:calc(54px + env(safe-area-inset-bottom,0px));--mobile-gap:max(5px,env(safe-area-inset-top,0px))}
+  html,body{height:100%;overflow:hidden;overscroll-behavior:none}
+  .desktop{height:var(--mobile-height,100dvh);min-height:0;padding-bottom:var(--taskbar-height)}
+  .desktop .desktop-icons{inset:18px 12px calc(var(--taskbar-height) + 12px);width:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:minmax(88px,max-content);align-content:start;gap:12px 5px;padding:8px;overflow:auto;overscroll-behavior:contain}
+  .desktop .desktop-icons .desktop-icon{width:auto;min-width:0;min-height:88px;margin:0;padding:9px 3px;gap:8px;justify-content:center;flex:none;font:12px/1.3 Arial}
+  .desktop .desktop-icons .desktop-icon>img{width:32px;height:32px}
+  .desktop .desktop-icons .desktop-icon>span{padding:3px 4px;overflow-wrap:normal;font-size:12px}
+  .desktop:not(.show-desktop):has(>.window.is-active:not([hidden]))>.desktop-icons{visibility:hidden}
+  .desktop>.window:not(.is-active):not(.renri-night){visibility:hidden;pointer-events:none}
+  .desktop.show-desktop>.window{visibility:hidden;pointer-events:none}
+  .desktop>.window:not(.music-player):not(.mines-window):not(.renri-night){left:5px!important;top:var(--mobile-gap)!important;right:auto!important;bottom:auto!important;width:calc(100% - 10px)!important;max-width:none!important;height:calc(var(--mobile-height,100dvh) - var(--taskbar-height) - var(--mobile-gap) - 5px)!important;max-height:calc(var(--mobile-height,100dvh) - var(--taskbar-height) - var(--mobile-gap) - 5px)!important;min-height:0!important;transform:none!important}
+  .window>.titlebar{height:36px;min-height:36px;touch-action:pan-y;cursor:default;padding:3px 3px 3px 6px;gap:6px}
+  .titlebar strong{font-size:13px}
+  .window-controls>button{width:36px;height:28px;min-height:28px}
+  .window-controls>button::before{left:14px;top:10px}
+  .window-controls>button[aria-label^="Свернуть"]::before{left:14px;top:18px}
+  .window-controls>button[aria-label^="Развернуть"]{display:none}
+  #explorer>.menubar{display:none}
+  #explorer>.toolbar{min-height:44px;gap:4px;padding:2px 4px}
+  #explorer .tool-button{min-height:38px;font-size:13px;padding:5px 11px}
+  #explorer .toolbar .separator,#explorer .toolbar [data-page="extensions"]{display:none}
+  #explorer .addressbar{min-height:43px;font-size:12px;gap:8px;padding:3px 8px}
+  #explorer .address{height:36px;padding:2px 5px}
+  #explorer .addressbar .small-button,#explorer #address,#explorer .sidebar{display:none}
+  .mobile-folder{display:block;min-width:0;flex:1;width:100%;height:31px;font:16px Arial;color:#111;background:#fff;border:0;border-radius:0;padding:3px 5px;cursor:pointer}
+  .desktop select,.desktop input[type="text"],.desktop input[type="password"]{font-size:16px}
+  .renri-password-form input,.extension-copy-manual input{min-height:38px}
+  #paint-text{font-size:16px!important}
+  .explorer-body{margin:0 3px}
+  .page-scroll{overscroll-behavior:contain;-webkit-overflow-scrolling:touch;scroll-padding:12px}
+  .page{padding-left:18px;padding-right:18px}
+  .inner-page{padding-top:20px}
+  .inner-page .section-kicker{padding-bottom:18px}
+  .preset-description,.intro,.about-copy{font-size:14px;line-height:1.7}
+  .about-copy .credits{font-size:12px}
+  .preset-properties{font-size:12px;line-height:1.7}
+  .preset-import,.preset-guide-body p,.preset-update p,.extension-features p,.extension-credits,.script-runner-note,.script-theme-note,.extension-archive-note{font-size:12px;line-height:1.8}
+  .preset-download,.preset-post,.extension-copy{min-height:44px;font-size:12px}
+  .preset-guide>summary{padding:13px 12px;font-size:13px}
+  .statusbar{min-height:21px;height:21px}
+  .statusbar>span:nth-child(n+2){display:none}
+  .hero{min-height:240px;overflow:hidden}
+  .hero h1{font-size:26px}
+  .hero p{font-size:13px;line-height:1.75}
+  .hero .primary{min-height:44px;font-size:12px}
+  .folder-row{padding:15px 2px;gap:10px}
+  .folder-row strong{font-size:14px}
+  .folder-row small{font-size:12px;line-height:1.6}
+  .file-type{font-size:7px;white-space:nowrap}
+  .site-footer{flex-wrap:wrap;gap:12px}
+  .notepad.mobile-open{display:flex;flex-direction:column}
+  .notepad .note-paper{flex:1;min-height:0;overflow:auto;font-size:15px}
+  .renri-window .renri-content{flex:1;min-height:0;overflow:auto}
+  .renri-window .renri-filebar{min-height:39px}
+  .renri-file-icons>button{min-height:105px;font-size:12px}
+  .renri-window .renri-txt{font-size:14px;line-height:1.7}
+  .renri-night{bottom:calc(var(--taskbar-height) + 8px)!important;right:6px!important;max-height:calc(var(--mobile-height,100dvh) - var(--taskbar-height) - 16px);overflow:auto}
+  .desktop>.music-player{left:5px!important;right:auto!important;top:auto!important;bottom:calc(var(--taskbar-height) + 6px)!important;width:calc(100% - 10px)!important;max-width:none;max-height:calc(var(--mobile-height,100dvh) - var(--taskbar-height) - 12px);overflow:auto;transform:none!important}
+  .desktop>.mines-window{left:50%!important;top:var(--mobile-gap)!important;transform:translateX(-50%)!important;max-width:calc(100% - 10px);max-height:calc(var(--mobile-height,100dvh) - var(--taskbar-height) - var(--mobile-gap) - 5px);overflow:auto}
+  .music-player>.titlebar,.mines-window>.titlebar,.renri-night>.titlebar{position:sticky;top:0;z-index:2}
+  .paint-menubar summary,.photos-menubar summary{min-height:32px;display:flex;align-items:center}
+  .classic-popup{max-height:calc(var(--mobile-height,100dvh) - var(--taskbar-height) - 100px);overflow:auto}
+  .classic-popup>button{min-height:36px}
+  .photo-toolbar .classic{min-height:36px}
+  .photo-toolbar{flex-shrink:0}
+  .taskbar{top:calc(var(--mobile-height,100dvh) - var(--taskbar-height));bottom:auto;height:var(--taskbar-height);padding:5px 5px calc(5px + env(safe-area-inset-bottom,0px));gap:5px;z-index:11001;overflow:hidden}
+  .taskbar .taskbar-grip,.taskbar .taskbar-space{display:none}
+  .taskbar .start-button{height:44px;min-height:44px;padding:5px 7px!important;gap:5px;font-size:13px;flex-shrink:0}
+  .taskbar .start-button img{width:20px;height:20px}
+  .taskbar .taskbar-apps{display:flex;align-items:center;gap:5px;flex:1;min-width:0;height:44px;overflow-x:auto;overflow-y:hidden;overscroll-behavior:contain;scrollbar-width:none;touch-action:pan-x}
+  .taskbar-apps::-webkit-scrollbar{display:none}
+  .taskbar .taskbar-apps>.task-button{flex:0 0 118px!important;width:118px!important;min-width:118px;max-width:118px;height:40px;padding:6px!important;gap:6px;justify-content:flex-start;font-size:12px}
+  .taskbar .taskbar-apps>.task-button>span{display:block!important;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .taskbar .taskbar-apps>.task-button>img{width:20px!important;height:20px!important;flex-shrink:0}
+  .taskbar #note-task[data-mobile-closed]{display:none!important}
+  .taskbar .tray{height:40px;padding:4px 5px;gap:0;flex-shrink:0}
+  .taskbar .tray>.language,.taskbar .tray>img{display:none}
+  .taskbar #clock{font:11px Arial;min-width:31px;text-align:center;padding:10px 0}
+  .mobile-desktop-button{display:flex;flex-direction:column;gap:1px;padding:3px 5px;min-width:40px;height:40px;min-height:40px;flex-shrink:0;font-size:9px}
+  .mobile-desktop-button img{width:18px;height:18px}
+  .mobile-desktop-button[aria-pressed="true"]{box-shadow:var(--border-in);background:#deded6}
+  .mobile-start-backdrop{display:block;position:fixed;inset:0;border:0;background:#0003;z-index:11000}
+  .start-menu{left:5px;bottom:calc(100dvh - var(--mobile-height,100dvh) + var(--taskbar-height) + 5px);width:calc(100% - 10px);max-height:calc(var(--mobile-height,100dvh) - var(--taskbar-height) - 15px);z-index:11002}
+  .start-menu .start-rail{width:29px;flex:0 0 29px;font-size:20px}
+  .start-menu nav{min-width:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;padding:9px;overflow:auto;overscroll-behavior:contain}
+  .start-menu nav>button{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:7px;height:auto;min-height:78px;padding:9px;font:12px/1.3 Arial;overflow-wrap:anywhere;box-shadow:inset 1px 1px #dfdfdf,inset -1px -1px #a0a0a0}
+  .start-menu nav>button img{width:32px;height:32px}
+  .start-menu nav>.mobile-start-extra{display:flex}
+  .start-menu nav hr{grid-column:1/-1;width:100%;margin:2px 0}
+}
+@media(max-width:360px){
+  .page{padding-left:14px;padding-right:14px}
+  .taskbar{gap:4px;padding-left:4px;padding-right:4px}
+  .taskbar .taskbar-apps>.task-button{flex-basis:108px!important;width:108px!important;min-width:108px;max-width:108px}
+  .start-menu nav{padding:7px;gap:4px}
+  .start-menu nav>button{min-height:74px;padding:7px}
+}
+
+/* Paint keeps its classic chrome, with controls sized for fingers on phones. */
+.paint-mobile-bar,.paint-mobile-dock,.paint-mobile-info,.paint-panel-heading,.paint-panel-shade,.paint-mobile-custom,.paint-mobile-help,.paint-tool-grid>button>span{display:none}
+@media(max-width:800px){
+  #paint-window{overflow:hidden}
+  #paint-window button,#paint-window summary{touch-action:manipulation}
+  #paint-window .paint-mobile-bar{display:flex;gap:4px;align-items:center;padding:4px;min-height:48px;flex-shrink:0;border-bottom:1px solid #808080}
+  .paint-mobile-bar>.classic{height:40px;min-width:44px;flex:1;padding:4px;font:12px Arial;white-space:nowrap}
+  #paint-mobile-zoom{height:40px;min-width:0;width:92px;padding:2px;font:16px Arial;background:#fff;border:1px solid #808080;border-radius:0}
+  #paint-window .paint-workarea{border:0;min-height:0}
+  #paint-window .paint-workspace{display:flex;padding:7px;overscroll-behavior:contain}
+  #paint-window .paint-stage{margin:auto}
+  #paint-window .paint-toolbox,#paint-window .paint-palette,#paint-window .paint-menubar{display:none;position:absolute;left:4px;right:4px;bottom:104px;max-height:calc(100% - 151px);margin:0;padding:8px;z-index:21;background:#c0c0c0;box-shadow:var(--border-out),0 -3px 10px #0004;overflow:auto;overscroll-behavior:contain}
+  #paint-window[data-paint-panel=tools] .paint-toolbox{display:block}
+  #paint-window[data-paint-panel=colors] .paint-palette{display:grid;grid-template-columns:44px 1fr;gap:8px}
+  #paint-window[data-paint-panel=menu] .paint-menubar{display:flex;flex-direction:column;align-items:stretch;gap:4px}
+  #paint-window .paint-panel-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;grid-column:1/-1;padding:0 0 8px;font:14px Arial}
+  .paint-panel-heading>.classic{min-width:70px;min-height:40px;font:13px Arial;padding:5px 10px}
+  #paint-window .paint-panel-shade:not([hidden]){display:block;position:absolute;inset:84px 3px 104px;z-index:20;border:0;background:#0003}
+  #paint-window .paint-tool-grid{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:auto;gap:5px}
+  #paint-window .paint-tool-grid>button{width:100%;min-height:66px;height:auto;display:flex;flex-direction:column;justify-content:center;gap:4px;padding:6px 3px}
+  #paint-window .paint-tool-grid>button>svg{width:24px;height:24px;flex-shrink:0}
+  #paint-window .paint-tool-grid>button>span{display:block;font:11px/1.2 Arial;overflow-wrap:anywhere}
+  #paint-window .paint-options{display:flex;align-items:center;gap:12px;padding:8px}
+  #paint-window .paint-options label{font:12px Arial;flex-direction:row;align-items:center}
+  #paint-window .paint-options select{width:74px;height:40px;font:16px Arial}
+  #paint-window .shape-modes{flex:1;flex-direction:row;margin:0;gap:4px}
+  #paint-window .shape-modes button{height:44px;min-width:40px;flex:1;box-shadow:var(--border-out);display:grid;place-items:center}
+  #paint-window .paint-swatches{grid-column:1/-1;grid-row:2;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:44px;gap:5px;flex-shrink:1}
+  #paint-window .paint-swatches>button{width:100%;height:44px}
+  #paint-window .paint-swatches>button[aria-pressed=true]{outline:2px solid #000080;outline-offset:1px;box-shadow:inset 0 0 0 3px #fff}
+  #paint-window .paint-current-colors{width:44px;height:44px;min-height:44px;grid-row:3}
+  #paint-window .paint-mobile-custom{display:block;grid-column:2;grid-row:3;min-height:44px;font:14px Arial}
+  #paint-window .paint-menubar>.classic-dropdown>summary,#paint-window .paint-menubar>button{min-height:44px;padding:10px;text-align:left;font:14px Arial;box-shadow:var(--border-out);background:#c0c0c0;color:#000}
+  #paint-window .paint-menubar .classic-popup{position:static;box-shadow:var(--border-in);max-height:none;min-width:0;width:100%;padding:4px}
+  #paint-window .paint-menubar .classic-popup>button{min-height:44px;font:13px Arial}
+  #paint-window .paint-menubar .classic-popup kbd{display:none}
+  #paint-window .paint-mobile-help{display:block;font:12px/1.6 Arial;margin:4px 0;padding:8px;box-shadow:var(--border-in);flex-shrink:0}
+  #paint-window .paint-menubar>*{flex-shrink:0}
+  #paint-window .paint-mobile-info{display:flex;align-items:center;gap:6px;padding:2px 6px;height:40px;min-height:40px;flex-shrink:0;border-top:1px solid #fff;font:12px Arial}
+  #paint-mobile-tool{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .paint-mobile-info>label{display:flex;align-items:center;gap:6px;white-space:nowrap}
+  #paint-mobile-size{height:36px;width:75px;font:16px Arial;border:1px solid #808080;border-radius:0;background:#fff}
+  .paint-mobile-info>.classic{height:36px;padding:4px;font:12px Arial}
+  #paint-window .paint-mobile-dock{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;padding:5px 4px;height:64px;min-height:64px;flex-shrink:0;border-top:1px solid #808080}
+  .paint-mobile-dock>.classic{min-width:0;padding:4px 1px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;font:12px Arial;overflow:hidden}
+  .paint-mobile-dock>.classic[aria-pressed=true],.paint-mobile-dock>.classic[aria-expanded=true]{box-shadow:var(--border-in);background:#dfdfdf;color:#000080}
+  #paint-mobile-color{width:20px;height:16px;box-shadow:inset 1px 1px #808080,inset -1px -1px #fff}
+  #paint-window .paint-status{display:none}
+  #paint-canvas.is-panning{cursor:grab}
+  #paint-canvas{user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+}

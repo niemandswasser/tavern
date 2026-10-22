@@ -1,0 +1,51 @@
+/* Preset files and their readme live inside the existing Explorer window. */
+.preset-folder-heading{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.preset-folder-heading>div{min-width:0;flex:1}
+.preset-folder-heading .section-icon{flex-shrink:0}
+.preset-folder-heading h1{margin:0 0 5px}
+.preset-folder-heading .intro{margin:0}
+.preset-count{align-self:flex-start;white-space:nowrap;font:10px Arial;color:#777768;padding-top:5px}
+.preset-card{box-shadow:var(--border-out);padding:3px;background:var(--silver)}
+.preset-card+.preset-card{margin-top:22px}
+.preset-card-bar{display:flex;justify-content:space-between;gap:10px;background:linear-gradient(90deg,#000080,#1084d0);color:#fff;padding:5px 8px;font:bold 11px Arial}
+.preset-card-older .preset-card-bar{background:linear-gradient(90deg,#555b62,#939aa1)}
+.preset-post{text-decoration:none;color:#000;min-height:35px}
+.preset-notes-heading{font:bold 15px/1.5 Arial;color:#272741;margin:30px 0 0;padding-top:18px;border-top:1px dotted #b9b9a9}
+.preset-card-body{padding:19px 18px 13px;background:#f7f7ed;margin-top:3px}
+.preset-file-heading{display:flex;align-items:center;gap:13px}
+.preset-file-heading>img{width:40px;height:40px;flex-shrink:0}
+.preset-file-heading>div{min-width:0}
+.preset-edition{font:9px/1.6 Arial;letter-spacing:1px;color:#6b6b61}
+.preset-file-heading h2{font:700 24px/1.2 Georgia,'Times New Roman',serif;color:#222244;margin:5px 0 0;overflow-wrap:anywhere}
+.preset-file-heading h2 span{display:block;font:700 14px/1.5 Arial;letter-spacing:.4px;margin-top:3px}
+.preset-description{font-size:12px;line-height:1.8;margin:17px 0;color:#53534a}
+.preset-properties{margin:0 0 18px;border-top:1px dotted #b9b9a9;font-size:11px;line-height:1.6}
+.preset-properties>div{display:grid;grid-template-columns:91px minmax(0,1fr);gap:10px;padding-top:10px}
+.preset-properties dt{color:#737366}
+.preset-properties dd{margin:0;color:#222}
+.preset-download-row{display:flex;flex-wrap:wrap;align-items:center;gap:11px 15px}
+.preset-download{text-decoration:none;color:#000;min-height:35px;background:#d9d9cc}
+.preset-download-row>span{font:10px Arial;color:#737366}
+.preset-import{font-size:10px;line-height:1.7;color:#6c6c61;margin:12px 0 0}
+.preset-update{display:flex;align-items:flex-start;gap:12px;background:#ffffe1;border:1px solid #c6c6a6;padding:14px;margin:21px 0;color:#3b3b2e}
+.preset-update>img{width:28px;height:28px;flex-shrink:0}
+.preset-update>div{min-width:0;flex:1}
+.preset-update h2{font:bold 12px/1.5 Arial;margin:0 0 7px;color:#222244}
+.preset-update p,.preset-guide-body p{font-size:11px;line-height:1.8;margin:8px 0}
+.preset-update blockquote{margin:9px 0;padding:10px;background:#fffef5;box-shadow:var(--border-in);font-size:11px;line-height:1.6}
+.preset-update blockquote strong{display:block;margin-bottom:3px}
+.preset-update code,.preset-guide code{font:11px/1.6 'Courier New',monospace;overflow-wrap:anywhere}
+.preset-update blockquote code{display:block}
+.preset-guide{margin-top:13px;border:1px solid #c9c9b8}
+.preset-guide>summary{cursor:pointer;padding:10px 12px;font:bold 12px/1.5 Arial;background:#eeeedf;color:#272741}
+.preset-guide>summary:hover{background:#e5e5d3}
+.preset-guide>summary:focus-visible{outline:1px dotted #000;outline-offset:-4px}
+.preset-guide-body{padding:5px 13px 10px}
+.preset-settings{width:100%;border-collapse:collapse;font-size:11px;line-height:1.6;margin:12px 0}
+.preset-settings caption{text-align:left;padding:0 0 8px;color:#777768;font-size:10px}
+.preset-settings th,.preset-settings td{text-align:left;padding:7px 8px;border:1px solid #d4d4c3;vertical-align:top}
+.preset-settings th{font-weight:400;width:55%;background:#f0f0e4}
+.preset-guide-body .preset-footnote{font-size:10px;color:#737366}
+.preset-regex-list{margin:10px 0;padding-left:21px;line-height:2}
+.preset-signoff{font:10px/1.8 Arial;color:#81816f;margin:20px 0 0}
+@media(max-width:580px){.preset-folder-heading{gap:10px;flex-wrap:wrap}.preset-folder-heading .section-icon{width:32px;height:32px}.preset-folder-heading .intro{font-size:11px}.preset-count{display:none}.preset-card-body{padding:14px 12px 12px}.preset-file-heading{gap:9px;align-items:flex-start}.preset-file-heading>img{width:30px;height:30px;margin-top:7px}.preset-file-heading h2{font-size:22px}.preset-file-heading h2 span{font-size:12px;letter-spacing:0}.preset-edition{font-size:8px;letter-spacing:.4px}.preset-properties>div{grid-template-columns:70px minmax(0,1fr);gap:7px}.preset-update{gap:8px;padding:11px}.preset-update>img{width:22px;height:22px}.preset-guide-body{padding:5px 10px 10px}.preset-settings th,.preset-settings td{padding:6px}.preset-settings th{width:52%}}
